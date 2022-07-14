@@ -13,14 +13,6 @@ export default {
       title: "Video",
       type: "file",
       options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "image",
-      title: "Image",
-      type: "image",
-      options: {
         hotspot: true, //enables userinterface for selecting what areas of an image should be croped or vice versa
       },
     },
