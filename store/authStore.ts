@@ -3,6 +3,7 @@
 // through google , similar to cookies
 import create from "zustand";
 import { persist } from "zustand/middleware";
+// axios are used to make http requests
 import axios from "axios";
 
 // creating two properties userProfile and addUser
