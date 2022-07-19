@@ -5,6 +5,8 @@ import { Video } from "../types";
 import VideoCard from "../components/VideoCard";
 import NoResults from "../components/NoResults";
 
+import { BASE_URL } from "../utils";
+
 interface IProps {
   videos: Video[];
 }
@@ -25,7 +27,7 @@ const Home = ({ videos }: IProps) => {
 // in nextJs we can fetch data using below async function
 export const getServerSideProps = async () => {
   // making a get request to backend
-  const { data } = await axios.get(`http://localhost:3000/api/post`);
+  const { data } = await axios.get(`${BASE_URL}/api/post`);
 
   return {
     props: {

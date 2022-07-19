@@ -22,13 +22,20 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
 
   const onVideoPress = () => {
     if (playing) {
-      videoRef.current?.pause();
+      videoRef?.current?.pause();
       setPlaying(false);
     } else {
-      videoRef.current?.play();
+      videoRef?.current?.play();
       setPlaying(true);
     }
   };
+
+  useEffect(() => {
+
+    if (videoRef?.current) { //if we have a valid video selected
+      videoRef.current.muted = isVideoMuted;
+    }
+  }, [isVideoMuted]);
 
   return (
     <div className="flex flex-col border-b-2 border-gray-200 pb-6">
