@@ -6,12 +6,20 @@ import { persist } from "zustand/middleware";
 // axios are used to make http requests
 import axios from "axios";
 
+import { BASE_URL } from "../utils";
+
 // creating two properties userProfile and addUser
 const authStore = (set: any) => ({
   userProfile: null,
+  allUsers: [],
 
   addUser: (user: any) => set({ userProfile: user }),
   removeUser: () => set({ userProfile: null }),
+  fetchAllUsers: async () => {
+    const response = await axios.get(`${BASE_URL}/api/users`);
+
+    set({ allUsers: response.data });
+  },
 });
 
 const useAuthStore = create(
