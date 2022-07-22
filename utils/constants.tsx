@@ -1,6 +1,13 @@
 import { BsCode, BsEmojiSunglasses } from "react-icons/bs";
-import { GiMountains, GiCakeSlice, GiGalaxy, GiLipstick } from "react-icons/gi";
+import {
+  GiClothes,
+  GiMountains,
+  GiCakeSlice,
+  GiLipstick,
+  GiConverseShoe,
+} from "react-icons/gi";
 import { FaPaw, FaMedal, FaGamepad } from "react-icons/fa";
+import { SiYourtraveldottv } from "react-icons/si";
 
 export const topics = [
   {
@@ -8,20 +15,20 @@ export const topics = [
     icon: <BsCode />,
   },
   {
-    name: "comedy",
-    icon: <BsEmojiSunglasses />,
+    name: "alps",
+    icon: <GiMountains />,
   },
   {
-    name: "gaming",
-    icon: <FaGamepad />,
+    name: "travel",
+    icon: <SiYourtraveldottv />,
   },
   {
-    name: "food",
-    icon: <GiCakeSlice />,
+    name: "shoes",
+    icon: <GiConverseShoe />,
   },
   {
-    name: "dance",
-    icon: <GiGalaxy />,
+    name: "fashion",
+    icon: <GiClothes />,
   },
   {
     name: "beauty",
@@ -37,27 +44,4 @@ export const topics = [
   },
 ];
 
-export const footerList1 = [
-  "About",
-  "Newsroom",
-  "Store",
-  "Contact",
-  "Carrers",
-  "ByteDance",
-  "Creator Directory",
-];
-export const footerList2 = [
-  "FOLKSGAL for Good",
-  "Advertise",
-  "Developers",
-  "FOLKSGAL Rewards",
-  "Transparency",
-];
-export const footerList3 = [
-  "Help",
-  "Safety",
-  "Terms",
-  "Privacy",
-  "Creator Portal",
-  "Community Guidelines",
-];
+export const footerList1 = [":)"];
